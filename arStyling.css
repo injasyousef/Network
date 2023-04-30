@@ -1,0 +1,155 @@
+* {
+    padding : 0;
+    margin: 0;
+    font-family: 'Cairo', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    overflow-x: hidden;
+    background-image: url("space.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 5s;
+
+    animation-name: anim;
+    animation-direction: alternate-reverse;
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes anim {
+    20% {
+        background-image: url("prog.jpg");
+    }
+
+    50% {
+        background-image: url("bkg.png");
+    }
+
+    70% {
+        background-image: url("network.jpg");
+    }
+
+    100% {
+        background-image: url("space.jpg");
+    }
+
+} 
+.main {
+    height: 100vh;
+    width: 100%;
+    
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 45px;
+    padding-right: 8%;
+    padding-left: 8%;
+}
+
+.logo {
+    color: white;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.logo:hover {
+    font-size: 45px;
+    text-shadow: 4px 2px 0 lightseagreen;
+}
+
+.logo-part {
+    background: -webkit-linear-gradient(rgb(174, 0, 255), rgb(0, 42, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+nav ul li a:hover {
+    color: #FF4500; 
+    transition: .4s;
+    opacity: 70%;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    bottom: 50%;
+    width: 100%;
+}
+
+.comp-net {
+    /*color: #FF4500;*/
+    position: relative;
+    font-size: 5vw;
+    color: rgb(0, 0, 0,20%);
+    -webkit-text-stroke: 0.01vw #3e3d3d;
+    text-transform: uppercase;
+    font-weight: 800;
+
+}
+
+
+
+.comp-net::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    -webkit-text-stroke: 0.001vw #FF4500;
+    color: #FF4500;
+    border-right: 2px solid #FF4500;
+    overflow: hidden;
+    animation: animate 8s linear infinite;
+    white-space: nowrap;
+}
+
+@keyframes animate  {
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+    70%,90% {
+        width: 100%;
+    }
+}
+.wel-msgtwo {
+    color: white;
+    font-size: 45px;
+    margin-bottom: 5px;
+    margin-left: 270px;
+}
+
+.wel-msgone {
+    color:beige;
+    letter-spacing: 1px;
+    font-size: 22px;
+    margin-bottom: 10px;
+    margin-left: 500px;
+}
+
+
